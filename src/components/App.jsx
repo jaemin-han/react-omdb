@@ -28,6 +28,7 @@ class App extends Component {
 
   // 'handleSubmitSearch' function is called in render-return and passed to
   // 'SearchHeader.jsx' file as a button* as 'this.props.--'
+  // Fetch to get all movie list
   handleSubmitSearch(e) {
     //this is coming from this.state.searchTerm above
     fetch(`http://www.omdbapi.com/?s=${this.state.searchTerm}`)
@@ -42,6 +43,7 @@ class App extends Component {
   }
 
   // this function is referenced in the constructor and render-return below
+  // Get movie list to display one page after
   handleSubmitNextPage(e) {
     //this is coming from this.state.searchTerm & currentpages above
     fetch(`http://www.omdbapi.com/?s=${this.state.searchTerm}&page=${this.state.currentPage + 1}`)
@@ -56,7 +58,8 @@ class App extends Component {
     .catch(err => console.log('Error: ', err));
   }
 
-  // this function is referenced in the constructor and render-return below
+  // This function is referenced in the constructor and render-return below
+  // Get movie list to display on the previous page
   handleSubmitPrevPage() {
     //this is coming from this.state.searchTerm above
     fetch(`http://www.omdbapi.com/?s=${this.state.searchTerm}&page=${this.state.currentPage - 1}`)
@@ -72,6 +75,7 @@ class App extends Component {
   }
 
   // 'displayNext()' function is called render-returned function* below
+  // Display movies on the following page if current page goes over 10 movies
   displayNext() {
     if (this.state.totalResults > this.state.currentPage * 10) {
       return (
@@ -82,6 +86,7 @@ class App extends Component {
     }
   }
   // 'displayPrev()' function is called bottom and not transferred
+  // Button to go back a page
   displayPrev() {
     if (this.state.currentPage > 1) {
       return (
@@ -93,8 +98,9 @@ class App extends Component {
   }
 
 
-  // this is the place where <SearchHeader /> and <MovieList /> info are tranferred to their
-  // own folders ---- all the green fonts are passed to corresponding folders/files.
+  // This is the place where <SearchHeader /> and <MovieList /> info are tranferred to their
+  // Wwn folders ---- all the purple fonts are passed to corresponding folders/files.
+  // All components called inside 'App' div class
   render() {
     return (
       <div className="App">

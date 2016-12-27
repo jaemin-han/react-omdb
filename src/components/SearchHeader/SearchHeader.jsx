@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import './SearchHeader.css';
 
- // inside 'SearchHeader' class -- reference info from 'App.js' in a html structure.
+ // Inside 'SearchHeader' class -- reference info from 'App.js' in a html structure.
+ // One 'div' header, input, and a button
 class SearchHeader extends Component {
   render() {
     return (
       <div>
         <header>
-          <h1>OMDB Search</h1>
+          <h1>OMDB Search Movies!</h1>
         </header>
         <div id="search-container">
           <input

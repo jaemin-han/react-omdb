@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './MovieListItem.css';
 
-  // all green fonts from 'MovieList.jsx' are passed down here as 'this.props. -- '
+  // 'year, title, poster, imdb' from 'MovieList.jsx'
 class MovieListItem extends Component {
   render() {
     return (

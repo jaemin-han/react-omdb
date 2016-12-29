@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MovieListItem from '../MovieListItem/MovieListItem';
+// css for this specific component
 import './MovieList.css';
 
  // Inside 'MovieList' class -- reference info from 'App.js' in a html structure.
@@ -17,7 +18,6 @@ class MovieList extends Component {
           poster={movie.Poster}
           imdb={movie.imdbID}
           plot={movie.Plot}
-
         />
       );
     });

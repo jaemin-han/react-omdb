@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// css for this specific component
 import './MovieListItem.css';
 
   // 'year, title, poster, imdb' from 'MovieList.jsx'

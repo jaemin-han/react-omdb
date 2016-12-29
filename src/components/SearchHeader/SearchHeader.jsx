@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// css for this specific component
 import './SearchHeader.css';
 
  // Inside 'SearchHeader' class -- reference info from 'App.js' in a html structure.

@@ -101,6 +101,8 @@ class App extends Component {
   // This is the place where <SearchHeader /> and <MovieList /> info are tranferred to their
   // Wwn folders ---- all the purple fonts are passed to corresponding folders/files.
   // All components called inside 'App' div class
+  // Inside index.js file, "App" is called to pick up all data
+  // from here functions on this page are passed down to 'SearchHeader' and 'MovieList' files
   render() {
     return (
       <div className="App">
